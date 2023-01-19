@@ -1,6 +1,6 @@
 export default {
     colors: {
-        header: '#1B1B1F1', 
+        header: '#1B1B1F', 
         background_primary: '#F4F5F6',
         background_secondary: '#FFFF',
         text: '#7A7A80',
