@@ -4,6 +4,8 @@ import { RFValue } from 'react-native-responsive-fontsize';
 
 import Logo from '../../../assets/logo.svg';
 
+import { Car } from '../../components/Car';
+
 import { Container, Header, TotalCars, HeaderContent } from './styles';
 
 export function Home(){
@@ -25,6 +27,8 @@ export function Home(){
                     </TotalCars>
                 </HeaderContent>
             </Header>
+
+            <Car />
         </Container>
     );
 }
