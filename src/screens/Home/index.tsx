@@ -9,6 +9,16 @@ import { Car } from '../../components/Car';
 import { Container, Header, TotalCars, HeaderContent } from './styles';
 
 export function Home(){
+    const carData = {
+        brand: 'audi',
+        name: 'RS 5 Coupé',
+        rent: {
+            period: 'AO DIA',
+            price: 120
+        },
+        thumbnail: 'https://www.pngmart.com/files/1/Audi-RS5-Red-PNG.png'
+    }
+
     return(
         <Container>
             <StatusBar 
@@ -28,7 +38,7 @@ export function Home(){
                 </HeaderContent>
             </Header>
 
-            <Car />
+            <Car data={carData} />
         </Container>
     );
 }
