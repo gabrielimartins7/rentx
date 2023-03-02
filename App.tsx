@@ -11,7 +11,7 @@ import {
   Archivo_600SemiBold
 } from '@expo-google-fonts/archivo';
 
-import { CarDetails } from './src/screens/CarDetails';
+import { CarDetails } from './src/screens/carDetails';
 
 import theme from './src/styles/theme';
 
