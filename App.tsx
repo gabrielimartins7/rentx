@@ -11,10 +11,9 @@ import {
   Archivo_600SemiBold
 } from '@expo-google-fonts/archivo';
 
-import { CarDetails } from './src/screens/carDetails';
+import { Scheduling } from './src/screens/Scheduling';
 
 import theme from './src/styles/theme';
-
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -31,7 +30,7 @@ export default function App() {
 
   return (
     <ThemeProvider  theme={theme}>
-      <CarDetails />
+      <Scheduling />
     </ThemeProvider>
   )
 }
