@@ -116,7 +116,7 @@ export function SchedulingDetails(){
             </Content>
 
             <Footer>
-                <Button title='Confirmar' />
+                <Button title='Alugar agora' />
             </Footer>
         </Container>
     );
