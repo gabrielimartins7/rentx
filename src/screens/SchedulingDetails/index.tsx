@@ -52,7 +52,7 @@ export function SchedulingDetails({ navigation }: DashboardProps){
     return(
         <Container>
             <Header>
-                <BackButton onPress={() => {}} />
+                <BackButton onPress={() => navigation.navigate('Scheduling')} />
             </Header>
 
             <CarImages>

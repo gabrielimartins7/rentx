@@ -38,7 +38,7 @@ export function Scheduling({ navigation }: DashboardProps){
                     backgroundColor='transparent'
                 />
                 <BackButton 
-                    onPress={() => {}} 
+                    onPress={() => navigation.navigate('CarDetails')} 
                     color={theme.colors.shape}
                 />
 

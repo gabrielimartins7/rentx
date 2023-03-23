@@ -41,7 +41,7 @@ export function CarDetails({ navigation }: DashboardProps){
     return(
         <Container>
             <Header>
-                <BackButton onPress={() => {}} />
+                <BackButton onPress={() => navigation.navigate('Home')} />
             </Header>
 
             <CarImages>
