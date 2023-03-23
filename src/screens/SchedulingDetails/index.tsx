@@ -15,7 +15,8 @@ import gasolineSVG from '../../../assets/gasoline.svg';
 import exchangeSVG from '../../../assets/exchange.svg';
 import peopleSVG from '../../../assets/people.svg';
 
-
+import { StackScreenProps } from '@react-navigation/stack';
+import { RootStackParamList } from '../../@types/navigation';
 
 import { 
     Container,
@@ -43,7 +44,9 @@ import {
     RentalPriceTotal,
 } from './styles';
 
-export function SchedulingDetails(){
+type DashboardProps = StackScreenProps<RootStackParamList, 'Scheduling'>;
+
+export function SchedulingDetails({ navigation }: DashboardProps){
     const theme = useTheme();
 
     return(
@@ -116,7 +119,7 @@ export function SchedulingDetails(){
             </Content>
 
             <Footer>
-                <Button title='Alugar agora' />
+                <Button title='Alugar agora' color={theme.colors.success} onPress={() => navigation.navigate('SchedulingComplete')} />
             </Footer>
         </Container>
     );

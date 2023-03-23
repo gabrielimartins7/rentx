@@ -5,4 +5,13 @@ export type RootStackParamList = {
     CarDetails: {
       option: string;
     };
+    Scheduling: {
+      option: string;
+    };
+    SchedulingDetails: {
+      option: string;
+    };
+    SchedulingComplete: {
+      option: string;
+    };
   };

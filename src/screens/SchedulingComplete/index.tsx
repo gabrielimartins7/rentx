@@ -1,6 +1,9 @@
 import React from 'react';
 import { useWindowDimensions, StatusBar } from 'react-native';
 
+import { StackScreenProps } from '@react-navigation/stack';
+import { RootStackParamList } from '../../@types/navigation';
+
 import LogoSvg from '../../../assets/logo_background_gray.svg';
 import DoneSvg from '../../../assets/done.svg';
 
@@ -14,7 +17,9 @@ import {
     Footer
 } from './styles';
 
-export function SchedulingComplete(){
+type DashboardProps = StackScreenProps<RootStackParamList, 'Scheduling'>;
+
+export function SchedulingComplete({ navigation }: DashboardProps){
     const { width } = useWindowDimensions();
 
     return (
@@ -38,7 +43,7 @@ export function SchedulingComplete(){
             </Content>
 
             <Footer>
-                <ConfirmButton title='OK' />
+                <ConfirmButton title='OK' onPress={() => navigation.navigate('Home')} />
             </Footer>
         </Container>
     );

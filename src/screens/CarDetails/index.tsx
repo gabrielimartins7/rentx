@@ -12,6 +12,11 @@ import gasolineSVG from '../../../assets/gasoline.svg';
 import exchangeSVG from '../../../assets/exchange.svg';
 import peopleSVG from '../../../assets/people.svg';
 
+import { StackScreenProps } from '@react-navigation/stack';
+import { RootStackParamList } from '../../@types/navigation';
+
+type DashboardProps = StackScreenProps<RootStackParamList, 'Scheduling'>;
+
 
 
 import { 
@@ -31,7 +36,7 @@ import {
     Footer
 } from './styles';
 
-export function CarDetails(){
+export function CarDetails({ navigation }: DashboardProps){
 
     return(
         <Container>
@@ -75,7 +80,7 @@ export function CarDetails(){
             </Content>
 
             <Footer>
-                <Button title='Confirmar' />
+                <Button title='Escolher período do aluguel' onPress={() => navigation.navigate('Scheduling')} />
             </Footer>
         </Container>
     );
