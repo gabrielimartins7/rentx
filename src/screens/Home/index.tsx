@@ -31,16 +31,6 @@ export function Home(){
     const [loading, setLoading] = useState(true);
     const { navigate } = useNavigation<HomeScreenNavigationProp>();
 
-    const carData = {
-        brand: 'audi',
-        name: 'RS 5 Coupé',
-        rent: {
-            period: 'AO DIA',
-            price: 120
-        },
-        thumbnail: 'https://www.pngmart.com/files/1/Audi-RS5-Red-PNG.png'
-    }
-
     useEffect(() => {
         async function fetchCars() {
             try {
