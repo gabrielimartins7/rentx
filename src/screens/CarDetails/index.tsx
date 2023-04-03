@@ -13,11 +13,21 @@ import exchangeSVG from '../../../assets/exchange.svg';
 import peopleSVG from '../../../assets/people.svg';
 
 import { StackScreenProps } from '@react-navigation/stack';
-import { RootStackParamList } from '../../@types/navigation';
 
-type DashboardProps = StackScreenProps<RootStackParamList, 'Scheduling'>;
+import { CarDTO } from "../../dtos/CarDTOS";
+
+export type RootStackParamList = {
+    Home: undefined;
+    CarDetails: {
+      car: CarDTO;
+    };
+    Scheduling: undefined;
+    SchedulingDetails: undefined;
+    SchedulingComplete: undefined;
+  };
 
 
+  type CarDetailsProps = StackScreenProps<RootStackParamList, 'CarDetails'>;
 
 import { 
     Container,
@@ -36,7 +46,7 @@ import {
     Footer
 } from './styles';
 
-export function CarDetails({ navigation }: DashboardProps){
+export function CarDetails({ navigation, route }: CarDetailsProps){
 
     return(
         <Container>

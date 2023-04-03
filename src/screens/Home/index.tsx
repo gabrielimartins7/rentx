@@ -6,7 +6,6 @@ import { StatusBar } from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
 
 import { api } from '../../services/api';
-import { CarDTO } from '../../dtos/CarDTOS';
 
 import Logo from '../../../assets/logo.svg';
 
@@ -27,7 +26,7 @@ import {
 } from './styles';
 
 export function Home(){
-    const [cars, setCars] = useState<CarDTO[]>([]);
+    const [cars, setCars] = useState([]);
     const [loading, setLoading] = useState(true);
     const { navigate } = useNavigation<HomeScreenNavigationProp>();
 
@@ -72,7 +71,7 @@ export function Home(){
                     keyExtractor={item => item.id} 
                     renderItem={({ item }) => 
                         <Car data={item}
-                            onPress={() => navigate('CarDetails')}
+                            onPress={() => navigate('CarDetails', { car: item })}
                         />
                     }
                 />
