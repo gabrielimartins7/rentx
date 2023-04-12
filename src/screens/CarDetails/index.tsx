@@ -20,6 +20,7 @@ export type RootStackParamList = {
     Home: undefined;
     CarDetails: {
       car: CarDTO;
+      option?: string;
     };
     Scheduling: undefined;
     SchedulingDetails: undefined;
